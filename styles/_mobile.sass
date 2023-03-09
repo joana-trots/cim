@@ -1,0 +1,28 @@
+@media screen and (max-width: 928px)
+    body
+        align-items: flex-start
+        margin: 60px auto 60px
+    .main
+        max-width: 100%
+        flex-direction: column
+        height: 100%
+    .col
+        &--1,
+        &--2,
+        &--3
+            width: 100%
+            [class*="header"]
+                padding: 15px 0
+                text-align: center
+        &--2
+            [class*="header"],
+            [class*="body"]
+                border: none
+        &__body
+            padding-bottom: 30px
+@media screen and (max-width: 720px)
+    .main
+        max-width: 690px
+@media screen and (max-width: 460px)
+    .main
+        max-width: 320px

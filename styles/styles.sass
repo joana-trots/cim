@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap')
+$black: #000000
+$white: #ffffff
+$green: #0E9A0B
+$blue: #00BCEB
+$dark-blue: #0D274D
+$grey: rgba(255, 255, 255, 0.2)
+
+
+*
+    box-sizing: border-box
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    margin: 0
+    padding: 0
+    
+body
+    width: 100vw
+    min-height: 100vh
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #E5E5E5
+.main
+    max-width: 928px
+    height: 452px
+    display: flex
+    border: 1px solid $dark-blue
+    background-color: $white
+    font-family: Arial, sans-serif
+    font-weight: 400
+    font-size: 15px
+    line-height: 21px
+    color: $black
+.col
+    height: 100%
+    display: flex
+    flex-direction: column
+    &__header
+        font-family: 'Montserrat', sans-serif
+        font-size: 16px
+        font-weight: 700
+        line-height: 22px
+        background-color: $dark-blue
+        color: $white
+    &__body
+        height: inherit
+        padding: 16px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+    &--1
+        width: 283px
+        [class*="header"]
+            padding: 15px 65px 15px 45px
+    &--2
+        width: 320px
+        [class*="header"]
+            padding: 15px 48px 15px 55px
+            border-left: 1px solid $grey
+            border-right: 1px solid $grey
+        [class*="body"]
+            border-left: 1px solid $dark-blue
+            border-right: 1px solid $dark-blue
+    &--3
+        width: 328px
+        [class*="header"]
+            padding: 15px 84px 15px 101px
+a
+    text-decoration: none
+ul
+    position: relative
+    li
+        list-style: none
+        list-style-position: inside
+        margin-bottom: 10px
+        margin-left: 28px
+        &::before
+            content: url('../images/checkmark.svg')
+            margin-right: 12px
+            position: absolute
+            left: 0
+hr
+    border: .5px solid $blue
+    width: 238px
+    margin: 0 auto 14px
+.advantages
+    margin-bottom: 18px
+.price
+    text-align: center
+    font-weight: 700
+    color: #282828
+    &.spn
+        margin-top: 14px
+    p:nth-child(2)
+        margin-top: 4px
+        height: 26px    
+    span:nth-child(1)
+        font-size: 20px
+        line-height: 26px
+        font-weight: 900
+        color: $green
+        font-family: 'Montserrat', sans-serif
+    span:nth-child(2)
+        font-size: 14px
+        line-height: 26px
+        font-weight: 400
+.meters
+    margin-top: 14px
+    color: #282828
+    div
+        display: flex
+        gap: 30px
+    li
+        margin-left: 25px
+        margin-bottom: 8px
+        border-bottom: 1px solid #282828
+        &::before
+            content: url('../images/arrow.svg')
+            padding: 0 0.5px
+        &:hover,
+        &:focus
+            color: $blue
+            border-bottom: 1px solid transparent
+            cursor: pointer
+.btn
+    display: block
+    color: $white
+    background-color: $blue        
+    font-weight: 700
+    font-size: 18px
+    line-height: 21px
+    padding: 12px 12px 13px 13px
+    border-radius: 6px
+    text-align: center
+    max-width: 250px
+    margin-top: 16px
+    align-self: center
+
+@import _mobile
